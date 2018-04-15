@@ -1,0 +1,55 @@
+<div class="col-md-offset-1 col-md-5 items">
+    <h1>Items</h1>
+    <div class="row add-new-item">
+        <div class="col-md-8">
+            <input type="text" class="form-control input-add-item" placeholder="Type name here..." ng-model="addItem">
+        </div>
+        <div class="col-md-4">
+            <button class="btn btn-add " ng-click="add()">Add new</button>
+        </div>
+    </div>
+
+
+
+    <ul class="items-ul">
+        <li class="user-items" ng-repeat="item in items" ng-class="{'isActive': item.isActive}"
+            ng-click="showComments(item)">
+
+            <span>{{item.title}} <span class="badge">{{item.comments.length}}</span></span>
+
+
+            <button class="btn text-center btn-delete" ng-click="delete($index)">Delete</button>
+
+        </li>
+    </ul>
+
+</div>
+
+
+<div class="col-md-5 comments">
+    <h1>Comments #2</h1>
+
+    <ul class="list-unstyled" ng-if="active">
+        <li ng-repeat="comment in active.comments track by $index" class="user-comments">
+
+
+            <div>
+                <img ng-src="https://9to5mac.files.wordpress.com/2017/10/veggie.png" class="img-rounded img-thumbnail user-photo">
+            </div>
+
+            <div class="user-comment">
+                <span>{{comment}}</span>
+            </div>
+
+        </li>
+    </ul>
+
+
+    <div class="add-new-comment">
+
+            <img ng-src="https://9to5mac.files.wordpress.com/2017/10/veggie.png" class="img-rounded img-thumbnail user-photo">
+
+            <textarea class="form-control comment-area" rows="3" ng-model="addComment" ng-enter="addComments()" placeholder="Comment">
+            </textarea>
+        </div>
+</div>
