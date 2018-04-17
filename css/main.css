@@ -89,3 +89,24 @@ body{
     width: 375px;
     margin-left: 15px;
 }
+
+@media screen and (min-width: 400px) {
+    .input-add-item{
+        width: 100%;
+    }
+
+    .items{
+        height: auto;
+        box-shadow: none;
+    }
+
+    .comments{
+        margin-left: 0px;
+        box-shadow: none;
+    }
+
+    .user-photo {
+        width: 45px;
+        height: 45px;
+    }
+}
