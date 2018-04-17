@@ -90,7 +90,7 @@ body{
     margin-left: 15px;
 }
 
-@media screen and (max-width: 1400px) {
+@media screen and (max-width: 800px) {
     .input-add-item{
         width: 100%;
     }
